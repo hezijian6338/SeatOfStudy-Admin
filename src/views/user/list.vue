@@ -28,17 +28,17 @@
           {{ scope.row.studentNum }}
         </template>
       </el-table-column>
-      <el-table-column class-name="status-col" label="Status" width="110" align="center">
+      <el-table-column label="Status" width="110" align="center">
         <template slot-scope="scope">
-          <el-tag :type="scope.row.status | statusFilter">{{ statusSwitch(scope.row.status) }}</el-tag>
+          <el-tag :type="scope.row.role | statusFilter">{{ roleSwitch(scope.row.role) }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column align="center" prop="created_at" label="Display_time" width="200">
+      <el-table-column align="center" prop="status" label="status" width="200">
         <template slot-scope="scope">
           <span>{{ statusSwitch(scope.row.status) }}</span>
         </template>
       </el-table-column>
-      <el-table-column>
+      <el-table-column label="操作" width="200">
         <template slot-scope="scope">
           <!-- <el-button type="text" size="small" @click="handleClick(scope.row)">查看</el-button> -->
           <el-button type="text" size="small" @click="modify(scope.row.id)">编辑</el-button>

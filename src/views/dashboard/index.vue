@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">管理员名称: {{ name }}</div>
     <div class="dashboard-text">自习室情况: </div>
     <el-row :gutter="12">
       <el-col :span="6">

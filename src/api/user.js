@@ -48,6 +48,13 @@ export function modifyUser(user) {
   })
 }
 
+export function getAdminUsers() {
+  return request({
+    url: '/user/admin/list',
+    method: 'get'
+  })
+}
+
 export function logout() {
   return request({
     url: '/vue-admin-template/user/logout',
