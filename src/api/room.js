@@ -20,3 +20,10 @@ export function getRoom({ roomId }) {
     method: 'get'
   })
 }
+
+export function getRoomRep() {
+  return request({
+    url: '/seat/report',
+    method: 'post'
+  })
+}
