@@ -73,6 +73,13 @@ export const constantRoutes = [
         name: 'list',
         component: () => import('@/views/user/list'),
         meta: { title: '列表', icon: 'tree' }
+      },
+      {
+        path: 'modify',
+        name: 'modify',
+        component: () => import('@/views/user/modify'),
+        meta: { title: '修改', icon: 'tree' },
+        hidden: true
       }
     ]
   },

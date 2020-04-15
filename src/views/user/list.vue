@@ -38,6 +38,12 @@
           <span>{{ statusSwitch(scope.row.status) }}</span>
         </template>
       </el-table-column>
+      <el-table-column>
+        <template slot-scope="scope">
+          <!-- <el-button type="text" size="small" @click="handleClick(scope.row)">查看</el-button> -->
+          <el-button type="text" size="small" @click="modify(scope.row.id)">编辑</el-button>
+        </template>
+      </el-table-column>
     </el-table>
   </div>
 </template>
@@ -88,6 +94,9 @@ export default {
         this.list = response.data.list
         this.listLoading = false
       })
+    },
+    modify(userId) {
+      this.$router.push({ path: '/user/modify', query: { userId: userId }})
     }
   }
 }

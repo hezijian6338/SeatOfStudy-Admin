@@ -25,6 +25,21 @@ export function getUserList() {
   })
 }
 
+export function getUser(userId) {
+  return request({
+    url: '/user/' + userId,
+    method: 'get'
+  })
+}
+
+export function modifyUser(user) {
+  return request({
+    url: '/user',
+    method: 'put',
+    data: user
+  })
+}
+
 export function logout() {
   return request({
     url: '/vue-admin-template/user/logout',
