@@ -56,6 +56,28 @@ export const constantRoutes = [
   },
 
   {
+    path: '/user',
+    component: Layout,
+    redirect: '/user/list',
+    name: 'Example',
+    meta: { title: '用户', icon: 'example' },
+    children: [
+      {
+        path: 'create',
+        name: 'create',
+        component: () => import('@/views/user/create'),
+        meta: { title: '创建', icon: 'table' }
+      },
+      {
+        path: 'list',
+        name: 'list',
+        component: () => import('@/views/user/list'),
+        meta: { title: '列表', icon: 'tree' }
+      }
+    ]
+  },
+
+  {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
