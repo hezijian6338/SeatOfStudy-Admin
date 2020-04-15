@@ -11,6 +11,14 @@ export function login({ username, password }) {
   })
 }
 
+export function createUser(user) {
+  return request({
+    url: '/user',
+    method: 'post',
+    data: user
+  })
+}
+
 export function getInfo() {
   return request({
     url: '/user/info',

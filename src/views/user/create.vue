@@ -16,11 +16,16 @@
           <el-option label="管理员" value="1" />
         </el-select>
       </el-form-item>
+      <!-- <el-form-item label="Activity phone"> -->
+      <el-button type="primary" @click="onSubmit">Confirm</el-button>
+      <!-- </el-form-item> -->
     </el-form>
   </div>
 </template>
 
 <script>
+import { createUser } from '@/api/user'
+
 export default {
   data() {
     return {
@@ -35,7 +40,11 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$message('submit!')
+      // this.$message('submit!')
+      createUser(this.form).then(res => {
+        const { message } = res
+        this.$message(message)
+      })
     },
     onCancel() {
       this.$message({
