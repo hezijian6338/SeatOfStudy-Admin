@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function createRoom({ roomNum, row, col }) {
   return request({
-    url: '/seat/room/' + roomNum + '/' + row + '/' + col,
+    url: '/seat/room/' + roomNum + '/row/' + row + '/col/' + col,
     method: 'post'
   })
 }
