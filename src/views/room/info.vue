@@ -49,7 +49,7 @@ export default {
     },
     showLink(row, col) {
       this.$message('二维码已经修改并且展示~')
-      this.link = 'http://localhost:8080?roomNumber=' + this.room.roomNumber + '&row=' + row + '&col=' + col
+      this.link = 'http://localhost:8080?roomNumber=' + this.room.roomNumber + '&row=' + row + 1 + '&col=' + col + 1
     }
   }
 }
